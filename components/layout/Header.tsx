@@ -146,15 +146,15 @@ export default function Header() {
             priority
 
             className="
-              h-[45px]
-              w-[45px]
+                h-[55px]
+              w-[55px]
               object-contain
-              sm:h-[55px]
-              sm:w-[55px]
-              lg:h-[65px]
-              lg:w-[65px]
-              xl:h-[70px]
-              xl:w-[70px]
+              sm:h-[65px]
+              sm:w-[65px]
+              lg:h-[75px]
+              lg:w-[75px]
+              xl:h-[85px]
+              xl:w-[85px]
             "
 
           />
