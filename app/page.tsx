@@ -5,7 +5,6 @@ import PageLayout from "@/components/layout/PageLayout";
 
 
 import Hero from "@/components/sections/Hero";
-import FeatureDemos from "@/components/sections/FeaturedDemos";
 import Reviews from "@/components/sections/Reviews";
 import References from "@/components/sections/References";
 
@@ -31,7 +30,7 @@ export default function Home() {
 
 
 
-      <FeatureDemos />
+
 
 
 

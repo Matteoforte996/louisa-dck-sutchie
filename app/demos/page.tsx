@@ -8,18 +8,20 @@ import Demo from "@/components/sections/Demo";
 
 
 
+
 export const metadata: Metadata = {
 
 
-  title: "Démos voix off",
+  title: "Démo voix off",
 
 
   description:
 
-    "Écoutez les démos voix off de Louisa Dck Sutchie : publicité, corporate, narration et e-learning.",
+    "Écoutez la démo voix off de Louisa Dck Sutchie.",
 
 
 };
+
 
 
 
@@ -59,11 +61,11 @@ export default function DemosPage() {
 
           <PageHeader
 
-            label="Démos"
+            label="Démo"
 
-            title="Découvrez différents univers vocaux."
+            title="Découvrez ma voix."
 
-            description="Chaque projet possède son rythme, son émotion et son intention. Écoutez plusieurs styles d’interprétation."
+            description="Un extrait représentatif de mon univers vocal, entre émotion, narration et interprétation."
 
           />
 
@@ -124,6 +126,8 @@ export default function DemosPage() {
 
 
 
+
+
           <p
 
             className="
@@ -139,6 +143,8 @@ export default function DemosPage() {
             la voix adaptée à votre projet.
 
           </p>
+
+
 
 
 
@@ -171,6 +177,7 @@ export default function DemosPage() {
 
 
       </section>
+
 
 
 

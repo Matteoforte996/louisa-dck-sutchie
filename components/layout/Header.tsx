@@ -54,6 +54,7 @@ const links = [
 
 
 
+
 export default function Header() {
 
 
@@ -92,20 +93,23 @@ export default function Header() {
 
 
 
-      <div
+            <div
 
         className="
-          mx-auto
           flex
-          max-w-7xl
+          w-full
           items-center
           justify-between
           px-6
-          py-2.5
-          lg:px-8
+          sm:px-8
+          lg:px-12
+          xl:px-16
+          2xl:px-20
+          py-3
         "
 
       >
+
 
 
 
@@ -135,16 +139,22 @@ export default function Header() {
 
             alt="Louisa Dck Sutchie - Comédienne voix off française"
 
-            width={65}
+            width={70}
 
-            height={28}
+            height={70}
 
             priority
 
             className="
-              h-auto
-              w-[65px]
+              h-[45px]
+              w-[45px]
               object-contain
+              sm:h-[55px]
+              sm:w-[55px]
+              lg:h-[65px]
+              lg:w-[65px]
+              xl:h-[70px]
+              xl:w-[70px]
             "
 
           />
@@ -162,6 +172,7 @@ export default function Header() {
 
 
         {/* NAVIGATION DESKTOP */}
+
 
 
 
@@ -192,22 +203,32 @@ export default function Header() {
 
 
 
+
             return (
+
 
 
               <Link
 
+
                 key={link.href}
+
 
                 href={link.href}
 
+
                 className={`
+
 
                   relative
 
+
                   text-sm
 
+
                   transition
+
+
 
 
                   ${
@@ -223,9 +244,13 @@ export default function Header() {
 
                   }
 
+
                 `}
 
+
+
               >
+
 
 
 
@@ -283,10 +308,13 @@ export default function Header() {
 
 
 
+
         <button
 
 
+
           onClick={() => setOpen(!open)}
+
 
 
           className="
@@ -299,7 +327,9 @@ export default function Header() {
           "
 
 
+
           aria-label="Menu"
+
 
 
         >
@@ -343,22 +373,39 @@ export default function Header() {
 
 
 
+
       <div
+
 
 
         className={`
 
+
+
           overflow-hidden
+
+
 
           border-t
 
+
+
           border-blue-500/10
+
+
 
           bg-[#050914]
 
+
+
           transition-all
 
+
+
           duration-500
+
+
+
 
 
 
@@ -376,6 +423,7 @@ export default function Header() {
           }
 
 
+
         `}
 
 
@@ -386,7 +434,10 @@ export default function Header() {
 
 
 
+
+
         <nav
+
 
           className="
             flex
@@ -396,13 +447,18 @@ export default function Header() {
             py-8
           "
 
+
         >
 
 
 
 
 
+
+
           {links.map((link)=>{
+
+
 
 
 
@@ -413,27 +469,41 @@ export default function Header() {
 
 
 
+
+
             return (
+
+
 
 
 
               <Link
 
 
+
                 key={link.href}
+
 
 
                 href={link.href}
 
 
+
                 onClick={() => setOpen(false)}
+
 
 
                 className={`
 
+
+
                   text-lg
 
+
+
                   transition
+
+
 
 
 
@@ -450,11 +520,14 @@ export default function Header() {
 
                   }
 
+
+
                 `}
 
 
 
               >
+
 
 
                 {link.label}
@@ -475,13 +548,18 @@ export default function Header() {
 
 
 
+
+
+
         </nav>
 
 
 
 
 
+
       </div>
+
 
 
 
