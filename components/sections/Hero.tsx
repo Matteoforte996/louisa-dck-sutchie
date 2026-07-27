@@ -38,7 +38,7 @@ export default function Hero() {
         min-h-[calc(100svh-130px)]
         items-center
         overflow-hidden
-        py-[clamp(3rem,8vh,6rem)]
+        py-[clamp(2rem,5vh,4rem)]
         lg:py-0
       "
 
@@ -72,8 +72,9 @@ export default function Hero() {
 
           className="
             grid
-            gap-10
-            lg:grid-cols-[1fr_1fr]
+            gap-6
+            lg:grid-cols-2
+            lg:gap-14
             xl:gap-20
             2xl:gap-32
             lg:items-center
@@ -304,8 +305,10 @@ export default function Hero() {
 
                 className="
                   relative
-                  h-[clamp(300px,28vw,520px)]
-                  w-[clamp(300px,28vw,520px)]
+                  h-[clamp(260px,70vw,500px)]
+                  w-[clamp(260px,70vw,500px)]
+                  lg:h-[clamp(300px,28vw,500px)]
+                  lg:w-[clamp(300px,28vw,500px)]
                   overflow-hidden
                   rounded-full
                   border
@@ -361,8 +364,8 @@ export default function Hero() {
                   border
                   border-blue-500/30
                   bg-[#050914]/80
-                  px-[clamp(1rem,2vw,1.5rem)]
-                  py-[clamp(0.75rem,1.5vw,1.25rem)]
+                  px-[clamp(0.8rem,2vw,1.5rem)]
+                  py-[clamp(0.6rem,1.5vw,1.25rem)]
                   backdrop-blur-md
                 "
 
