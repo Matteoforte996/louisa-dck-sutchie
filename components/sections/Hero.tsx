@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Mic } from "lucide-react";
 
 import { useAudio } from "@/components/audio/AudioContext";
 
@@ -316,8 +316,13 @@ export default function Hero() {
                   lg:py-[clamp(0.6rem,1.5vw,1.25rem)]
                 "
               >
-                <p
+                {/* VOICE OFF */}
+
+                <div
                   className="
+                    flex
+                    items-center
+                    gap-2
                     whitespace-nowrap
                     text-[8px]
                     uppercase
@@ -331,12 +336,27 @@ export default function Hero() {
                     lg:tracking-[0.3em]
                   "
                 >
-                  🎙 Voice Off
-                </p>
+                  <Mic
+                    className="
+                      h-3
+                      w-3
+                      shrink-0
+                      lg:h-4
+                      lg:w-4
+                    "
+                  />
 
-                <p
+                  <span>Voice Off</span>
+                </div>
+
+                {/* FRANCE */}
+
+                <div
                   className="
                     mt-1
+                    flex
+                    items-center
+                    gap-2
                     whitespace-nowrap
                     text-[9px]
                     text-neutral-300
@@ -347,8 +367,28 @@ export default function Hero() {
                     lg:text-sm
                   "
                 >
-                  🇫🇷 France
-                </p>
+                  <span
+                    className="
+                      inline-flex
+                      h-3
+                      w-[18px]
+                      shrink-0
+                      overflow-hidden
+                      rounded-[2px]
+
+                      lg:h-4
+                      lg:w-6
+                    "
+                    role="img"
+                    aria-label="Drapeau français"
+                  >
+                    <span className="h-full flex-1 bg-blue-700" />
+                    <span className="h-full flex-1 bg-white" />
+                    <span className="h-full flex-1 bg-red-600" />
+                  </span>
+
+                  <span>France</span>
+                </div>
               </div>
 
               {/* WAVEFORM */}
