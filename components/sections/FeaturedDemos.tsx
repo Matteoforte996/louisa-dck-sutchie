@@ -14,7 +14,6 @@ import Reveal from "@/components/ui/Reveal";
 
 const demos = [
 
-
   {
     title: "Démo générale",
 
@@ -26,47 +25,7 @@ const demos = [
 
   },
 
-
-
-  {
-    title: "Publicité",
-
-    description:
-      "Une voix dynamique et expressive pour vos campagnes et contenus de marque.",
-
-    file:
-      "/audio/publicite.MP3",
-
-  },
-
-
-
-  {
-    title: "Corporate",
-
-    description:
-      "Une narration professionnelle pour vos films et communications.",
-
-    file:
-      "/audio/corporate.MP3",
-
-  },
-
-
-  {
-    title: "Narration",
-
-    description:
-      "Une interprétation immersive pour raconter vos histoires.",
-
-    file:
-      "/audio/documentaire.MP3",
-
-  },
-
-
 ];
-
 
 
 
@@ -113,16 +72,16 @@ function WaveMini() {
 
         />
 
-
       ))}
 
 
     </div>
 
-
   );
 
 }
+
+
 
 
 
@@ -152,8 +111,8 @@ export default function FeaturedDemos() {
 
 
 
-  return (
 
+  return (
 
 
     <section
@@ -172,7 +131,6 @@ export default function FeaturedDemos() {
 
 
       <Container>
-
 
 
 
@@ -204,6 +162,8 @@ export default function FeaturedDemos() {
 
 
 
+
+
             <h2
 
               className="
@@ -215,9 +175,10 @@ export default function FeaturedDemos() {
 
             >
 
-              Découvrez différents univers vocaux.
+              Découvrez ma voix.
 
             </h2>
+
 
 
 
@@ -235,9 +196,8 @@ export default function FeaturedDemos() {
 
             >
 
-              Des extraits mettant en avant différentes
-              intentions : publicité, narration, émotion
-              et communication professionnelle.
+              Un extrait représentatif de mon univers vocal,
+              entre émotion, narration et interprétation.
 
             </p>
 
@@ -263,7 +223,7 @@ export default function FeaturedDemos() {
             mt-12
             grid
             gap-6
-            md:grid-cols-2
+            max-w-2xl
           "
 
         >
@@ -274,55 +234,71 @@ export default function FeaturedDemos() {
 
 
 
-          {demos.map((demo)=>(
+          {demos.map((demo)=>{
+
+
+            const active =
+              currentTrack === demo.file && playing;
 
 
 
-            (() => {
-
-
-              const active =
-                currentTrack === demo.file && playing;
+            return (
 
 
 
-              return (
+              <Reveal key={demo.title}>
 
 
-                <Reveal key={demo.title}>
+                <article
 
 
-                  <article
+                  className={`
 
-                    className={`
+                    group
 
-                      group
+                    rounded-3xl
 
-                      rounded-3xl
+                    border
 
-                      border
+                    p-8
 
-                      p-8
+                    transition-all
 
-                      transition-all
-
-                      duration-500
+                    duration-500
 
 
-                      ${
-                        active
+                    ${
+                      active
 
-                        ?
+                      ?
 
-                        "border-blue-400/60 bg-blue-500/[0.08] shadow-[0_0_40px_rgba(43,127,255,0.12)]"
+                      "border-blue-400/60 bg-blue-500/[0.08] shadow-[0_0_40px_rgba(43,127,255,0.12)]"
 
-                        :
+                      :
 
-                        "border-neutral-800 bg-neutral-950/40 hover:border-blue-500/40 hover:bg-blue-500/[0.03]"
+                      "border-neutral-800 bg-neutral-950/40 hover:border-blue-500/40 hover:bg-blue-500/[0.03]"
 
-                      }
+                    }
 
-                    `}
+                  `}
+
+
+                >
+
+
+
+
+
+
+
+                  <div
+
+                    className="
+                      flex
+                      items-start
+                      justify-between
+                      gap-6
+                    "
 
                   >
 
@@ -331,185 +307,95 @@ export default function FeaturedDemos() {
 
 
 
-                    <div
 
-                      className="
-                        flex
-                        items-start
-                        justify-between
-                        gap-6
-                      "
+                    <div>
 
-                    >
 
 
+                      <h3
 
+                        className="
+                          text-2xl
+                          font-medium
+                        "
 
+                      >
 
-                      <div>
+                        {demo.title}
 
+                      </h3>
 
-                        <h3
 
-                          className="
-                            text-2xl
-                            font-medium
-                          "
 
-                        >
 
-                          {demo.title}
 
-                        </h3>
 
 
+                      <p
 
+                        className="
+                          mt-4
+                          leading-relaxed
+                          text-neutral-400
+                        "
 
+                      >
 
+                        {demo.description}
 
-                        <p
+                      </p>
 
-                          className="
-                            mt-4
-                            leading-relaxed
-                            text-neutral-400
-                          "
 
-                        >
 
-                          {demo.description}
 
-                        </p>
 
 
 
+                      <div
 
-
-                        <div
-
-                          className="
-                            mt-6
-                            flex
-                            items-center
-                            gap-3
-                          "
-
-                        >
-
-
-                          {active && <WaveMini />}
-
-
-                          <span
-
-                            className="
-                              text-xs
-                              uppercase
-                              tracking-[0.25em]
-                              text-neutral-500
-                            "
-
-                          >
-
-                            {active
-
-                              ? "Lecture en cours"
-
-                              : "Écouter"
-
-                            }
-
-                          </span>
-
-
-
-                        </div>
-
-
-
-
-                      </div>
-
-
-
-
-
-
-
-
-                      <button
-
-                        onClick={() => {
-
-
-                          if(active){
-
-                            toggleAudio();
-
-                          }
-
-                          else {
-
-                            playTrack(demo.file);
-
-                          }
-
-
-                        }}
-
-                        className={`
-
+                        className="
+                          mt-6
                           flex
-
-                          h-14
-
-                          w-14
-
-                          shrink-0
-
                           items-center
-
-                          justify-center
-
-                          rounded-full
-
-                          transition
-
-
-                          ${
-                            active
-
-                            ?
-
-                            "bg-blue-400 text-black"
-
-                            :
-
-                            "bg-white text-black hover:bg-blue-400"
-
-                          }
-
-                        `}
+                          gap-3
+                        "
 
                       >
 
 
 
-                        {active
-
-                          ?
-
-                          <Pause size={20}/>
-
-                          :
-
-                          <Play size={20}/>
-
-                        }
+                        {active && <WaveMini />}
 
 
 
-                      </button>
+
+
+
+                        <span
+
+                          className="
+                            text-xs
+                            uppercase
+                            tracking-[0.25em]
+                            text-neutral-500
+                          "
+
+                        >
+
+                          {active
+
+                            ? "Lecture en cours"
+
+                            : "Écouter"
+
+                          }
+
+
+                        </span>
+
+
+
+                      </div>
 
 
 
@@ -521,20 +407,122 @@ export default function FeaturedDemos() {
 
 
 
-                  </article>
-
-
-                </Reveal>
-
-
-              );
-
-
-            })()
 
 
 
-          ))}
+
+                    <button
+
+
+                      onClick={() => {
+
+
+                        if(active){
+
+                          toggleAudio();
+
+                        }
+
+                        else {
+
+                          playTrack(demo.file);
+
+                        }
+
+
+                      }}
+
+
+
+                      className={`
+
+
+                        flex
+
+                        h-14
+
+                        w-14
+
+                        shrink-0
+
+                        items-center
+
+                        justify-center
+
+                        rounded-full
+
+                        transition
+
+
+
+                        ${
+                          active
+
+                          ?
+
+                          "bg-blue-400 text-black"
+
+                          :
+
+                          "bg-white text-black hover:bg-blue-400"
+
+                        }
+
+
+                      `}
+
+
+                    >
+
+
+
+                      {active
+
+                        ?
+
+                        <Pause size={20}/>
+
+                        :
+
+                        <Play size={20}/>
+
+                      }
+
+
+
+                    </button>
+
+
+
+
+
+
+
+                  </div>
+
+
+
+
+
+
+
+                </article>
+
+
+
+
+
+              </Reveal>
+
+
+
+            );
+
+
+          })}
+
+
+
 
 
 
