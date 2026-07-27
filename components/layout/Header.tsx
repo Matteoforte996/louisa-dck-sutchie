@@ -105,7 +105,7 @@ export default function Header() {
           lg:px-12
           xl:px-16
           2xl:px-20
-          py-3
+          py-1
         "
 
       >
@@ -139,22 +139,22 @@ export default function Header() {
 
             alt="Louisa Dck Sutchie - Comédienne voix off française"
 
-            width={70}
+            width={80}
 
-            height={70}
+            height={80}
 
             priority
 
             className="
                 h-[55px]
-              w-[55px]
-              object-contain
-              sm:h-[65px]
-              sm:w-[65px]
-              lg:h-[75px]
-              lg:w-[75px]
-              xl:h-[85px]
-              xl:w-[85px]
+                w-[55px]
+                object-contain
+                sm:h-[65px]
+                sm:w-[65px]
+                lg:h-[75px]
+                lg:w-[75px]
+                xl:h-[85px]
+                xl:w-[85px]
             "
 
           />
